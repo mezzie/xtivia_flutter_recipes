@@ -14,20 +14,20 @@ class _RecipesState extends State<Recipes> {
       appBar: AppBar(
         title: Text("Recipes"),
         actions: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => NewRecipe()),
-              );
-            },
-            child: Icon(IconData(57669, fontFamily: 'MaterialIcons'),
-                size: 25.0),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewRecipe()),
+                );
+              },
+              child: Icon(IconData(57669, fontFamily: 'MaterialIcons'),
+                  size: 25.0),
+            ),
           ),
-        ),
-      ],
+        ],
       ),
       body: Container(
         padding: EdgeInsets.all(8),
@@ -56,6 +56,15 @@ Widget getRecipes() {
       itemCount: RecipeService.instance.getRecipes().length,
       itemBuilder: (_, i) => ListTile(
         title: Text(RecipeService.instance.getRecipes()[i].title),
+        subtitle: Text(
+            (RecipeService.instance.getRecipes()[i].ingredients == null
+                    ? "0"
+                    : RecipeService.instance
+                        .getRecipes()[i]
+                        .ingredients
+                        .length
+                        .toString()) +
+                " ingredients"),
       ),
       separatorBuilder: (_, i) => Divider(),
     );

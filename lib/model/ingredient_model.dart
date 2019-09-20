@@ -1,6 +1,6 @@
 class IngredientModel{
-  String ingredient;
+  String name;
   String quantity;
 
-  IngredientModel({this.ingredient='', this.quantity=''});
+  IngredientModel({this.name='', this.quantity=''});
 }

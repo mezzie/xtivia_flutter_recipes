@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:xtivia_flutter_recipes/model/ingredient_model.dart';
 
 typedef OnDelete();
-
 class Ingredient extends StatefulWidget {
   final IngredientModel ingredientModel;
   final OnDelete onDelete;

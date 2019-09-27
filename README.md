@@ -1,6 +1,6 @@
-# xtivia_flutter_recipes
+# Xtivia Flutter Recipe App
 
-A new Flutter project.
+A simple flutter recipe app that demonstrates how to create a dynamic number of widgets 
 
 ## Getting Started
 
